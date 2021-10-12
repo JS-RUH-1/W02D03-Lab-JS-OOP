@@ -18,8 +18,7 @@ class Person {
     <div>interests: ${this.interests.join(',')}</div>
     </div>
     `;
-    document.body.appendChild(modal);
-        return JSON.parse(JSON.stringify(this));
+    return document.body.appendChild(modal);
     }
 }
 

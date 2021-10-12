@@ -21,8 +21,7 @@ class Car {
     <div>Registration: ${this.registration}</div>
     </div>
     `;
-    document.body.appendChild(modal);
-        return JSON.parse(JSON.stringify(this));
+    return document.body.appendChild(modal);
     }
 }
 
