@@ -14,5 +14,5 @@
 Create a file called `persons.html`. You are going to create a webpage for people to know each other. The page will display details about persons. Create whatever HTML you deem appropriate for this task and style the page as you like. However, be sure that the information about the persons are displayed on the webpage.
 - Create a file `persons.js`. Within `persons.js`:
     - Create at least 3 person objects.
-    - The person object below is made up of a number of PROPERTIES that describe the person (name, age, gender, interests(as array) and img) and of METHOD: bio.
+    - The person object is made up of a number of PROPERTIES that describe the person (name, age, gender, interests(as array) and img) and of a METHOD: bio.
     - When a user click on image the bio function will be used to display the name, age, first two interests in appropriate message as alert. 
