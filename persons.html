@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            width: 150px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+       
+<img onclick="person.bio()" id="img1" src="" alt="">
+<ul id="info1"></ul>
+
+<img onclick="person2.bio()"  id="img2"  src="" alt="">
+<ul id="info2"></ul>
+
+<img onclick="person3.bio()"  id="img3"  src="" alt="">
+<ul id="info3"></ul>
+
+
+<script>
+
+class Person {
+    constructor(name, age, gender, interests, img) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+      this.interests = interests;         
+      this.img = img;
+    }
+    bio() {
+      alert(`Name: ${this.name}, Age: ${this.age}, Gender: ${this.gender}, Interests: ${this.interests}`)
+    }
+    showImg (id) {
+        document.getElementById(`${id}`).src = this.img
+    }
+  }
+
+  person = new Person("Ahmed", "22", 'male', ['socer', 'TV'], '1.jpeg');
+  person2 = new Person("Noor", "22", 'male', ['socer', 'TV'], '2.jpeg');
+  person3 = new Person("Khaled", "22", 'male', ['socer', 'TV'], '3.jpeg');
+
+  person.showImg('img1')
+  person2.showImg('img2')
+  person3.showImg('img3')
+
+</script>
+</body>
+</html>

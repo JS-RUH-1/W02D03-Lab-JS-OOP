@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+<img onclick="car1.showMore(info1)" id="ford" src="" alt="">
+<ul id="info1"></ul>
+
+<img onclick="car2.showMore(info2)" id="img2"  src="" alt="">
+<ul id="info2"></ul>
+
+<img onclick="car3.showMore(info3)" id="img3"  src="" alt="">
+<ul id="info3"></ul>
+
+    <script>
+
+
+function Car(company, model, colour, image, registrationNumber, price) {
+    this.company = company;
+    this.model = model;
+    this.colour = colour;
+    this.image = image;
+    this.registrationNumber = registrationNumber;
+    this.price = price;
+
+    this.showMore = function(ul) {
+        ul.innerHTML = `
+      <li> Company: ${this.company} </li>
+      <li> Model: ${this.model} </li>
+      <li> Color: ${this.colour} </li>
+      <li> Registration Number: ${this.registrationNumber} </li>
+      <li> Price: ${this.price} </li>`
+    }
+    this.showImg = function(carName) {
+        document.getElementById(`${carName}`).src = this.image
+    }
+
+}
+const car1 = new Car('gg', 'gg', 'gg', '1.jpeg', 44, 33)
+car1.showImg('img2')
+
+const car2 = new Car('gg', 'gg', 'gg', '2.jpeg', 44, 66)
+car2.showImg('ford')
+
+const car3 = new Car('gg', 'gg', 'gg', '3.jpeg', 44, 44)
+car3.showImg('img3')
+
+
+function cheapestCar(){
+    let price = Math.min(car1.price, car2.price, car3.price )
+    return price
+}
+
+alert(`The cheapest car is: ${cheapestCar()}`)
+
+    </script>
+</body>
+</html>
