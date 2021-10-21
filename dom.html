@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+     <h1 id="heading"> Web Development Essentials</h1>
+    <p id="paragraph">W02D02-Lab in JavaScript course is about Scripting and Event Handling DOM!</p>
+    <button id="button1" onclick="heading()">heading</button>
+    <button id="button2" onclick="paragraph()">paragraph</button>
+    <button id="button3" onclick="paragraph1()">Highlight</button>
+    <button id="button4" onclick="img()">hide-image</button>
+    <button id="button5" onclick="img()">img</button>
+    
+
+    <form id="form" onsubmit="return ValidationEvent()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value=""><br>
+        <label for="course">Course:</label><br>
+        <input type="text" id="course" name="course" value=""><br><br>
+        <input type="submit" value="Submit">
+     
+    </form>
+    <br>
+    <img id="img1" onmouseover="setnewimg()" onmouseout="setoldimg()" src="http://www.javatpoint.com/images/javascript/javascript_logo.png">
+    <img id="img2" src="809-560s.jpg " style="display: none;">
+    
+    <script type="text/javascript" src="dom.js"></script>
+</body>
+</html>
